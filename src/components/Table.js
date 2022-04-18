@@ -23,7 +23,8 @@ function Table() {
         </tr>
       </thead>
       <tbody>
-        {data.filter((filterPlanet) => filterPlanet.name.toLowerCase().includes(filterByName.name))
+        {data.filter((filterPlanet) => filterPlanet.name.toLowerCase()
+          .includes(filterByName.name))
           .map((planet) => (
             <tr key={ planet.name }>
               <td>{planet.name}</td>
