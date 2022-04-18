@@ -4,6 +4,7 @@ import Context from './Context';
 
 function Provider({ children }) {
   const [data, setData] = useState([]); // criação do estado.
+  const [filterByName, setFilterByName] = useState({ name: '' }); // criando nova chave no estado.
   const url = 'https://swapi-trybe.herokuapp.com/api/planets/';
 
   useEffect(() => { // renderiza na página 1 vez só o resultado da tela assim que ela carrega.
@@ -15,8 +16,14 @@ function Provider({ children }) {
     getAPI();
   }, []);
 
+  const valueContext = {
+    data,
+    filterByName,
+    setFilterByName,
+  };
+
   return (
-    <Context.Provider value={ { data } }>
+    <Context.Provider value={ valueContext }>
       { children }
     </Context.Provider>
   );
