@@ -10,7 +10,9 @@ function Header() {
       <input
         type="text"
         data-testid="name-filter"
-        onChange={ (event) => setFilterByName({ name: event.target.value }) }
+        onChange={
+          (event) => setFilterByName({ name: event.target.value })
+        }
       />
     </header>
   );
