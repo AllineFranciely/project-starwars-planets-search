@@ -4,7 +4,7 @@ import Context from './Context';
 
 function Provider({ children }) {
   const [data, setData] = useState([]); // criação do estado.
-  const [planets, setPlanet] = useState([]); // estado criado para não utilização do data no useEffect do filter, uma vez que o lint reclamou e ao usar a variável data novamente quebrava a aplicação.
+  const [planets] = useState(data);
   const [filterByName, setFilterByName] = useState({ name: '' }); // criando nova chave no estado.
   const [filterByNumericValues, setFilterByNumericValues] = useState([
     {
@@ -20,7 +20,6 @@ function Provider({ children }) {
       const response = await fetch(url); // faz a chamada da API
       const { results } = await response.json(); // desestrutura para usar apenas a chavenecessária da API no formato json;
       setData(results); // a chave data do estado passa a ter o valor da promisse retornada.
-      setPlanet(results); // alterando a chave olanets que será usada no filter.
     };
     getAPI();
   }, []); // função exacutada apenas 1 vez => [].
