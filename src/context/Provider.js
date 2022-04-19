@@ -19,7 +19,7 @@ function Provider({ children }) {
     const getAPI = async () => {
       const response = await fetch(url); // faz a chamada da API
       const { results } = await response.json(); // desestrutura para usar apenas a chavenecessária da API no formato json;
-      setFilterData(results);
+      setFilterData(results); // a chave filterData tbm recebe o retorno da API.
       setData(results); // a chave data do estado passa a ter o valor da promisse retornada.
     };
     getAPI();
