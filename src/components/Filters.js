@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Context from '../context/Context';
 
 function Filters() {
@@ -9,6 +9,8 @@ function Filters() {
   } = useContext(Context);
   const { column, comparison, value } = filterByNumericValues[0];
   const initialValue = Number(value);
+  const [filterColumn, setFilterColumn] = useState(['population', 'orbital_period',
+    'diameter', 'rotation_period', 'surface_water']);
 
   const filterDataResults = () => filterData.filter((planet) => {
     if (initialValue || initialValue === 0) {
@@ -32,11 +34,13 @@ function Filters() {
           column: event.target.value,
         }]) }
       >
-        <option value="population">population</option>
-        <option value="orbital_period">orbital_period</option>
-        <option value="diameter">diameter</option>
-        <option value="rotation_period">rotation_period</option>
-        <option value="surface_water">surface_water</option>
+        { filterColumn.map((coluna) => (
+          <option
+            key={ coluna }
+            value={ coluna }
+          >
+            { coluna }
+          </option>)) }
       </select>
       <select
         name="comparison"
@@ -62,7 +66,10 @@ function Filters() {
       <button
         type="button"
         data-testid="button-filter"
-        onClick={ () => setFilterData(() => filterDataResults()) }
+        onClick={ () => {
+          setFilterColumn((prev) => prev.filter((valor) => valor !== column));
+          setFilterData(() => filterDataResults())
+        } }
       >
         Filtrar
       </button>
