@@ -1,5 +1,5 @@
 Projeto desenvolvido para conclusão do bloco 17 do módulo de front-end da Trybe.
-Aqui foi desenvolvida uma aplicação React com requisição à api externa que retorna uma lista de planetas da série famosa de filmes Star Wars. Foi trabalhado alteração nos estados globais da aplicação com op uso de Context API e componentes funcionais.
+Aqui foi desenvolvida uma aplicação React com requisição à api externa que retorna uma lista de planetas da série famosa de filmes Star Wars. Foi trabalhado alteração nos estados globais da aplicação com o uso de Context API e componentes funcionais.
 O projeto foi desenvolvido seguindo os requisitos a seguir:
 1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents`.
 API: `https://swapi-trybe.herokuapp.com/api/planets/`
