@@ -35,5 +35,6 @@ O `button` com o ícone de `x` deve existir em cada filtro de valores numéricos
 A coluna que este filtro selecionava deve passar a ficar disponível nos dropdowns dos demais filtros já presentes na tela. 
 
 7 - Ordene as colunas de forma ascendente ou descendente.
-![Gravação de tela de 23-![Gravação de tela de 23-05-2022 21_07_34](https://user-images.githubusercontent.com/86837443/169923511-1de01239-e6de-4df3-8e8c-a7f2fff3c508.gif)
-05-2022 20_15_46 (1)](https://user-images.githubusercontent.com/86837443/169921240-8987f518-6c9b-4f07-a3c6-e2bfe48a9793.gif)
+![Gravação de tela de 23-05-2022 21_07_34](https://user-images.githubusercontent.com/86837443/169923581-a49975e4-c3a4-4e57-be26-e00063e08578.gif)
+
+
